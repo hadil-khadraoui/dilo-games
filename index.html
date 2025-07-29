@@ -9,79 +9,66 @@
       font-family: 'Cairo', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     header {
       background-color: #009688;
       color: white;
-      padding: 15px 20px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #00695c;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
+      padding: 10px;
       flex-wrap: wrap;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .login-btn {
-      background-color: white;
-      color: #009688;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    .login-btn:hover {
-      background-color: #e0f2f1;
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .game-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
       padding: 20px;
     }
 
     .game-box {
       background-color: white;
+      border: 1px solid #ccc;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 10px;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .game-box h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    iframe {
+    .game-box iframe {
       width: 100%;
-      height: 300px;
+      height: 480px;
       border: none;
+      border-radius: 8px;
     }
 
     footer {
-      background-color: #333;
+      background-color: #009688;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 30px;
     }
 
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .login-btn {
-        margin-top: 10px;
+      .game-box iframe {
+        height: 300px;
       }
     }
   </style>
@@ -89,36 +76,33 @@
 <body>
 
   <header>
-    <h1>🎮 عالم DILO للألعاب</h1>
-    <button class="login-btn" onclick="alert('تسجيل الدخول غير متاح حالياً 😅')">تسجيل الدخول</button>
+    <h1>🎮 عالم DILO للألعاب 🎀</h1>
+    <p>استمتع بأجمل الألعاب المسلية للبنات والأولاد!</p>
   </header>
 
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="login.html">تسجيل الدخول</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+
   <div class="game-container">
+
+    <!-- لعبة Pacman -->
     <div class="game-box">
-      <h3>لعبة 1: Flappy Bird</h3>
-      <iframe src="https://www.retrogames.cc/embed/40697-flappy-bird.html"></iframe>
+      <h3>لعبة باكمان</h3>
+      <iframe src="pacman-canvas-master/index.html"></iframe>
     </div>
 
-    <div class="game-box">
-      <h3>لعبة 2: سوبر ماريو</h3>
-      <iframe src="https://www.retrogames.cc/embed/39755-super-mario-world.html"></iframe>
-    </div>
+    <!-- يمكنك إضافة ألعاب أخرى هنا -->
 
-    <div class="game-box">
-      <h3>لعبة 3: باكمان</h3>
-      <iframe src="https://www.friv.com/z/games/pacman/game.html"></iframe>
-    </div>
   </div>
 
   <footer>
-    &copy; 2025 عالم DILO للألعاب - جميع الحقوق محفوظة
+    <p>&copy; 2025 عالم DILO | جميع الحقوق محفوظة</p>
   </footer>
 
 </body>
 </html>
-
-<div class="game-box">
-  <h3>لعبة باكمان</h3>
-  <iframe src="pacman-canvas-master/index.html" width="100%" height="500" style="border:none;"></iframe>
-</div>
 
